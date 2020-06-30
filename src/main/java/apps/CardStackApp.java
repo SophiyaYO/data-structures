@@ -2,8 +2,10 @@ package apps;
 
 import ds.BasicStack;
 
-public class CardStackApp {
-    BasicStack<String> stack = new BasicStack<String>();
+import java.util.ArrayList;
+
+public class CardStackApp extends ListStackImpl {
+    ListStackImpl stack = new ListStackImpl();
 
     public static void main(String[] args) {
         CardStackApp app = new CardStackApp();
@@ -108,5 +110,10 @@ public class CardStackApp {
 
     public void desckSize() {
         System.out.println(stack.size());
+    }
+
+    @Override
+    public ArrayList<BasicStack> push() {
+        return null;
     }
 }
